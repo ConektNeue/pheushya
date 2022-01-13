@@ -11,10 +11,6 @@
 <body>
 
     <div class="ui-controller">
-        <div class="splash-screen"></div>
-        <div class="loading-screen">
-            <p>Chargement</p>
-        </div>
         <div class="canvas">
             <div class="modal">
 
@@ -58,14 +54,18 @@
                         </tr>
                         <tr>
                             <td id="playername1Display"></td>
-                            <td id="playercolor1Display"></td>
+                            <td><div id="playercolor1Display" class="color-in-table"></div></td>
                         </tr>
                         <tr>
                             <td id="playername2Display"></td>
-                            <td id="playercolor2Display"></td>
+                            <td><div id="playercolor2Display" class="color-in-table"></div></td>
                         </tr>
                     </table>
                     <div id="modalbtnPlayercheckingviewNext" class="btn-basic">Valider</div>
+                </div>
+
+                <div id="savedindicatingView">
+                    Patientez...
                 </div>
 
             </div>

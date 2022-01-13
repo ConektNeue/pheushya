@@ -20,6 +20,8 @@ let playercolor1Display = document.getElementById('playercolor1Display');
 let playername2Display = document.getElementById('playername2Display');
 let playercolor2Display = document.getElementById('playercolor2Display');
 
+let savedindicatingView = document.getElementById('savedindicatingView');
+
 // functions.
 modal.style.height = welcomeView.offsetHeight + 'px';
 
@@ -51,7 +53,7 @@ modalbtnPlayercreation1viewNext.onclick = function () {
         localStorage.setItem('playername1', playername1.value);
         localStorage.setItem('playercolor1', playercolor1.value);
         playername1Display.innerHTML = playername1.value;
-        playercolor1Display.innerHTML = playercolor1.value;
+        playercolor1Display.style.backgroundColor = playercolor1.value;
         welcomeView.style.marginLeft = '-200%';
     }
 }
@@ -83,8 +85,21 @@ modalbtnPlayercreation2viewNext.onclick = function () {
         localStorage.setItem('playername2', playername2.value);
         localStorage.setItem('playercolor2', playercolor2.value);
         playername2Display.innerHTML = playername2.value;
-        playercolor2Display.innerHTML = playercolor2.value;
+        playercolor2Display.style.backgroundColor = playercolor2.value;
         welcomeView.style.marginLeft = '-300%';
         modal.style.height = playercheckingView.offsetHeight + 'px';
+    }
+}
+
+modalbtnPlayercheckingviewNext.onclick = function () {
+    welcomeView.style.marginLeft = '-400%';
+    modal.style.height = savedindicatingView.offsetHeight + 'px';
+    setInterval("addPoint()", 400);
+}
+
+function addPoint() {
+    savedindicatingView.innerHTML += '.';
+    if (savedindicatingView.textContent.replace(/[^.]/g, "").length === 5) {
+        savedindicatingView.innerHTML = 'Patientez';
     }
 }
