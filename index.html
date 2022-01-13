@@ -28,16 +28,44 @@
                     <div id="modalbtnWelcomeviewNext" class="btn-basic">Nous sommes deux</div>
                 </div>
 
-                <div id="playercreationView">
+                <div id="playercreation1View">
                     <p class="title">Création du Joueur 1</p>
-                    <p>
-                        Vérifiez que la personne qui est censée
-                        jouer avec vous n'est pas partit au toilette.
-                        Le jeu se joue à deux joueurs.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat eveniet accusamus.
-                        Quod odio dolorem, iste excepturi, earum culpa assumenda quasi libero officia impedit doloremque mollitia ut nam? Minima, delectus.
+                    <label for="playername1">Indiquez un pseudo (3 lettres min)</label>
+                    <input type="text" name="playername1" id="playername1" class="modal-component-mbottom">
+                    <label for="playercolor1">Choisissez une couleur</label>
+                    <input type="color" name="playercolor1" id="playercolor1" style="cursor: pointer;">
+                    <div class="btn-basic" id="modalbtnPlayercreation1viewNext">Enregistrer</div>
+                </div>
+
+                <div id="playercreation2View">
+                    <p class="title">Création du Joueur 2</p>
+                    <label for="playername2">Indiquez un pseudo (3 lettres min)</label>
+                    <input type="text" name="playername2" id="playername2" class="modal-component-mbottom">
+                    <label for="playercolor2">Choisissez une couleur</label>
+                    <input type="color" name="playercolor2" id="playercolor2" style="cursor: pointer;">
+                    <div class="btn-basic" id="modalbtnPlayercreation2viewNext">Enregistrer</div>
+                </div>
+
+                <div id="playercheckingView">
+                    <p class="title">Vérification des informations</p>
+                    <p class="modal-component-mbottom">
+                        Vous devrez recharger la page si vous voulez changer vos informations.
                     </p>
-                    <div class="btn-basic">Nous sommes deux</div>
+                    <table>
+                        <tr>
+                            <th>Pseudo</th>
+                            <th>Couleur</th>
+                        </tr>
+                        <tr>
+                            <td id="playername1Display"></td>
+                            <td id="playercolor1Display"></td>
+                        </tr>
+                        <tr>
+                            <td id="playername2Display"></td>
+                            <td id="playercolor2Display"></td>
+                        </tr>
+                    </table>
+                    <div id="modalbtnPlayercheckingviewNext" class="btn-basic">Valider</div>
                 </div>
 
             </div>
