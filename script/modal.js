@@ -22,6 +22,8 @@ let playercolor2Display = document.getElementById('playercolor2Display');
 
 let savedindicatingView = document.getElementById('savedindicatingView');
 
+let playergame1View = document.getElementById('playergame1View');
+
 // functions.
 modal.style.height = welcomeView.offsetHeight + 'px';
 
@@ -95,6 +97,8 @@ modalbtnPlayercheckingviewNext.onclick = function () {
     welcomeView.style.marginLeft = '-400%';
     modal.style.height = savedindicatingView.offsetHeight + 'px';
     setInterval("addPoint()", 400);
+    setTimeout("beforeGameLaunch()", 2000);
+    setTimeout("launchGame()", 4000);
 }
 
 function addPoint() {
@@ -102,4 +106,13 @@ function addPoint() {
     if (savedindicatingView.textContent.replace(/[^.]/g, "").length === 5) {
         savedindicatingView.innerHTML = 'Patientez';
     }
+}
+
+function beforeGameLaunch() {
+    welcomeView.style.marginLeft = '-500%';
+}
+
+function launchGame() {
+    welcomeView.style.marginLeft = '-600%';
+    modal.style.height = playergame1View.offsetHeight + 'px';
 }
