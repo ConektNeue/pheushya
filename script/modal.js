@@ -115,3 +115,6 @@ function beforeGameLaunch() {
 function launchGame() {
     modal.style.height = playergame1View.offsetHeight + 'px';
 }
+
+welcomeView.style.marginLeft = '-500%';
+modal.style.height = playergame1View.offsetHeight + 'px';
